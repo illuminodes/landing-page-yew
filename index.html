@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link data-trunk rel="tailwind-css" href="styles/output.css">
+    <link data-trunk rel="copy-dir" href="public">
+
+    <title>illuminodes</title>
+    <link rel="icon" href="public/assets/nostr_logo_wht_prpl.png" type="image/x-icon">
+
+</head>
+
+<body class="h-dvh w-dvw flex overflow-y-auto bg-nostr-black text-nostr-white" href="/">
+    <div id="spinner" class="fixed z-50 flex flex-col gap-4 items-center justify-center w-dvw h-dvh bg-white">
+        <img src="/public/assets/illum_logo.png" class="w-32 h-32" />
+        <p class="text-2xl font-bold text-black">illuminodes</p>
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <style>
+                .spinner_HIK5 {
+                    transform-origin: center;
+                    animation: spinner_XVY9 1s cubic-bezier(0.36, .6, .31, 1) infinite
+                }
+
+                @keyframes spinner_XVY9 {
+                    50% {
+                        transform: rotate(180deg)
+                    }
+
+                    100% {
+                        transform: rotate(360deg)
+                    }
+                }
+            </style>
+            <circle cx="12" cy="12" r="3" />
+            <g class="spinner_HIK5">
+                <circle cx="4" cy="12" r="3" />
+                <circle cx="20" cy="12" r="3" />
+            </g>
+        </svg>
+    </div>
+</body>
+
+<script>
+
+    // Function to hide the spinner
+    function hideSpinner() {
+        // completely remove the spinener from the dom 
+        var el = document.getElementById('spinner');
+        if (el) {
+            el.remove();
+        }
+    }
+
+    // // Show the spinner when the page starts loading
+    // showSpinner();
+
+    // Polling function to check if the WASM module is loaded
+    function checkWasmLoaded() {
+        if (window.hasOwnProperty('wasmBindings')) {
+            // WASM module has been loaded and bindings are available
+            hideSpinner(); // Hide the spinner once the WASM module is ready
+        } else {
+            // Continue polling every 200ms until it's loaded
+            setTimeout(checkWasmLoaded, 200);
+        }
+    }
+
+    // Start polling for WASM readiness
+    checkWasmLoaded();
+</script>
+
+</html>
+

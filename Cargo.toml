@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+lucide-yew = "1.2.0"
 serde = "1.0.217"
 serde_json = "1.0.137"
 web-sys = { version = "0.3.77", features = ["Document", "Window"] }

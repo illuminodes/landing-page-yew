@@ -627,6 +627,7 @@ dependencies = [
 name = "landing-page-yew"
 version = "0.1.0"
 dependencies = [
+ "lucide-yew",
  "serde",
  "serde_json",
  "web-sys",
@@ -645,6 +646,15 @@ name = "log"
 version = "0.4.25"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "04cbf5b083de1c7e0222a7a51dbfdba1cbe1c6ab0b15e29fff3f6c077fd9cd9f"
+
+[[package]]
+name = "lucide-yew"
+version = "1.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a5e0b5c4fefe694cd7a3436db1f2296eae5ce4c27d72cedeaf7a957e208e7182"
+dependencies = [
+ "yew",
+]
 
 [[package]]
 name = "memchr"

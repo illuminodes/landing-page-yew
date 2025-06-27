@@ -1,6 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@source "../src/**/*";
+@source "../index.html";
+
+
+@theme {
+  --font-nostr-regular: "SF-Pro", sans-serif;
+  --font-nostr-bold: "SF-Pro-Bold", sans-serif;
+  --color-nostr-dark: #4B1862;
+  --color-nostr-light: #A334D5;
+  --color-nostr-black: #000000;
+  --color-nostr-white: #FFFFFF;
+  --bg-img-logo: url('/public/assets/background-principal.png');
+  --bg-img-fuzzy: url('/public/assets/purple-background.png');
+}
 
 @layer base {
     h1 {
@@ -19,6 +31,7 @@
         @apply text-base md:text-lg lg:text-xl text-wrap;
     }
 }
+
 @font-face {
     font-family: 'SF-Pro';
     src: url('/public/assets/sf-pro-regular.ttf');
@@ -55,4 +68,3 @@
     scrollbar-color: rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.1);
   }
 }
-

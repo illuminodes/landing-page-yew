@@ -1,14 +1,10 @@
 // CONFIGS
 pub const TCP_ADDRESS: &str = "0.0.0.0:4242";
-#[cfg(debug_assertions)]
-pub const CSS_STYLESHEET: &str = "../styles/main.css";
-
-#[cfg(not(debug_assertions))]
-pub const CSS_STYLESHEET: &str = "../styles/prodv3.css";
 
 // EXTERNAL LINKS
+pub const MAIL_TO_LINK: &str = "mailto:contact@illuminodes.com";
 pub const GITHUB_LINK: &str = "https://github.com/illuminodes/nostr-devs";
-pub const TELEGRAM_LINK: &str = "https://t.me/illuminodes";
+// pub const TELEGRAM_LINK: &str = "https://t.me/illuminodes";
 pub const X_LINK: &str = "https://twitter.com/illuminodes";
 pub const PRIMAL_LINK: &str =
     "https://primal.net/p/npub1dmnzphvk097ahcpecwfeml08xw8sg2cj4vux55m5xalqtzz9t78q6k3kv6";

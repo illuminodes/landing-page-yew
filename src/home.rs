@@ -9,8 +9,10 @@ pub fn home_page() -> Html {
         <div
             class="flex flex-col items-center justify-center gap-8 z-20 max-w-sm sm:max-w-xl text-center mt-24 sm:mt-48 bg-img-fuzzy bg-cover bg-center">
             <h1>{"Integrity in Identity"}</h1>
-            <p>{{crate::consts::WEBSITE_SUBTITLE}}</p>
-            <a target="_blank" href={{crate::consts::TELEGRAM_LINK}}>
+            <p class="max-w-xs sm:max-w-sm md: max-w-md">{{crate::consts::WEBSITE_SUBTITLE}}</p>
+            <a 
+                target="_blank" 
+                href={{crate::consts::MAIL_TO_LINK}}>
                 <button
                     class="px-12 py-4 bg-nostr-light text-white font-bold text-lg lg:text-xl rounded-full hover:bg-nostr-dark">
                         {"Contact Us"}
@@ -68,7 +70,7 @@ pub fn home_page() -> Html {
                             <p class="text-center md:text-left">{{crate::consts::WEBSITE_PHILOSOPHY_1}}</p>
                             <p class="text-center md:text-left">{{crate::consts::WEBSITE_PHILOSOPHY_2}}</p>
                         </div>
-                        <img src="/public/assets/icons/integrity.png" alt="Nodes Icon" class="sm:w-1/2 scale-75" />
+                        <img src="/public/assets/integrity.png" alt="Nodes Icon" class="sm:w-1/2 scale-75" />
                     </div>
                 </div>
             </div>
